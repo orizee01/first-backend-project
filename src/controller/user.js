@@ -128,12 +128,30 @@ const login = async (req, res) => {
         return err;
 
  }
+
 }
+
+ const helloWorld = async (req, res) => {
+    try {
+        console.log('I entered the world Controller', req.user)
+        res.status(200).json({
+            status: 'Success',
+            message: 'Hello World'
+        })
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).json({
+            status: 'Failed',
+            message: error.message
+        });
+    }
+ }
  module.exports = {
   fetchUsers,
   registerUsers,
    updateUsers,
   deleteUsers,
   getOneUser,
-   login
+   login,
+   helloWorld
 }
