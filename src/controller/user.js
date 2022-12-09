@@ -1,6 +1,7 @@
-const jwt = require("jsonwebtoken");
+
 const db = require("../config/config");
 const queries = require("../queries/user_query");
+const { generateToken } = require("../services/generateToken");
 
 const fetchUsers = async (req, res) => {
   try {
@@ -21,13 +22,6 @@ const fetchUsers = async (req, res) => {
 const registerUsers = async (req, res) => {
   try {
     let { firstname, lastname, email } = req.body;
-    const existingEmail = await db.any(queries.findByEmail, [email]);
-    if (existingEmail.length > 0) {
-      return res.status(400).json({
-        status: "Failed",
-        message: "Email already exists",
-      });
-    }
     const data = await db.any(queries.registerUsers, [
       firstname,
       lastname,
@@ -104,32 +98,16 @@ const getOneUser = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  let { email } = req.body;
-  try {
-    const student = await db.any(queries.getUserByEmail, [email]);
-    console.log(student);
-    if (student.length < 1) {
-      return res.status(404).json({
-        status: "Failed",
-        message: "No user with email",
-      });
-    }
-
-    const sessionToken = jwt.sign(
-      {
-        student_id: student.id,
-        email: student.email,
-        name: student.name,
-      },
-      process.env.JWT_SECRET_KEY
-    );
-
+    
+ try{
+      const [student] = req.user
+      const token = await generateToken(student)
     return res.status(200).json({
       status: "Success",
       message: "login successful",
       data: {
-        student,
-        token: sessionToken,
+        ...student,
+        token
       },
     });
   } catch (error) {

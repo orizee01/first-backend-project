@@ -1,26 +1,41 @@
+const {findUserByEmail, getByEmail } = require("../services");
+
 module.exports = {
-    helloWorld: (req, res, next) => {
+    checkIfUserExists: async (req, res, next) => {
         try {
-            console.log('I entered the world Middleware')
-            req.user = 'ore'
-            next()
-        } catch (error) {
-            res.status(404).json({
-                message: error.message,
-                status: 'failed',
-            })
+            let { email } = req.body;
+            const existingEmail = await findUserByEmail(email);
+            if (existingEmail.length > 0) {
+              return res.status(400).json({
+                status: "Failed",
+                message: "Email already exists",
+              });
+            }
+            next();
+        } catch (err) {
+            return res.status(400).json({
+                status: "Failed",
+                message: err.message,
+              });
         }
     },
 
-    hello: (req, res, next) =>{
-        try {
-            console.log('hello, hope you are good!')
-            next()
-        } catch(error){
-            res.status(404).json({
-                message: error.message,
-                status: 'failed',
-            });
-        }
-    }
+//     checkIfUserWithEmailExist: async(req, res, next) => {
+//         try {
+//              let { email } = req.body;
+//     const student = await getByEmail(email);
+//     if (student.length < 1) {
+//       return res.status(404).json({
+//         status: "Failed",
+//         message: "No user with email",
+//       });
+//     }
+//     next();
+// } catch (error) {
+//     return res.status(500).json({
+//       status: "Failed",
+//       message: error.message,
+//     });
+//   }
+// }
 }

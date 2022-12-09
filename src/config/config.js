@@ -6,4 +6,4 @@ dotenv.config()
 const pgp = pg({ promiseLib: promise, noLocking: true });
 const db = pgp(process.env.DB_URL);
 
-module.exports = db 
+module.exports = db

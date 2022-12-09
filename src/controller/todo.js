@@ -1,94 +1,97 @@
-const db = require('../../config/config.js');
-const queries = require('../../queries/todo_query');
+const db = require("../config/config");
+const queries = require("../queries/todo_query");
 
 const createTodo = async (req, res) => {
-     let { } = req.body;
-    try {
-        const batchForm= await db.any(queries.batchForm, [batch_id,closure_date,instructions])
-        return res.status(200).json({
-            status: 'Success',
-            message: 'Accessment created',
-            data: batchForm
-        })
-    } catch (error) {
-        res.status(500).json({
-          message: 'An error has ocurred',
-          error
-      })
-    }
-}
+  try {
+    let { title } = req.body;
+    const user = req.decoded;
+    console.log(user.id)
+    const toDo = await db.any(queries.toDo, [title, user.id]);
+    return res.status(200).json({
+      status: "success",
+      message: "todo Created",
+      data: toDo,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+      status: "fail",
+    });
+  }
+};
 
-// const getBatch = async(req, res) => {
-//   try {
-//     const batchForm = await db.any(queries.getbatch)
-//     return res.status(200).json({
-//       status: 'Success',
-//       message: 'Batch gotten',
-//       data: batchForm
-//     })
-//   } catch (error) {
-//     res.status(500).json({
-//         message: 'An error has ocurred',
-//         error
-//     })
-//   }
-// }
+const getTodo = async (req, res) => {
+  try {
+    const toDo = await db.any(queries.getTodo);
+    return res.status(200).json({
+      status: "success",
+      message: "Todo gotten",
+      data: toDo,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+      status: "fail",
+    });
+  }
+};
 
-// const updateBatch = async (req, res) => {
-//     let { id } = req.params;
-//     let {batch_id,closure_date,instructions} = req.body;
-//     try {
-//         const batchForm = await db.any(queries.updateBatch, [batch_id,closure_date,instructions, id])
-//         return res.status(200).json({
-//             status: 'Success',
-//             message: 'Batch Updated',
-//             data: batchForm
-//         })
-//     } catch (error) {
-//         res.status(500).json({
-//         message: 'An error has ocurred',
-//         error
-//     })
-//     }
-// }
+const updateTodo = async (req, res) => {
+  
+  let { title } = req.body;
+  try {
+    const toDo = await db.any(queries.updateTodo, [title, user.id]);
+    return res.status(200).json({
+      status: "success",
+      message: "Todo updated",
+      data: toDo,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+      status: "fail",
+    });
+  }
+};
 
-// const getOneBatch = async (req, res) => {
-//   let { id } = req.params;
-//   try {
-//      const batchForm = await db.any(queries.getOneBatch, [id])
-//         return res.status(200).json({
-//             status: 'Success',
-//             message: 'Accessment Retrieved',
-//             data: batchForm
-//         })
-//   } catch (error) {
-//     res.status(500).json({
-//         message: 'An error has ocurred',
-//         error
-//     })
-//   }
-// }
+const getOneTodo = async (req, res) => {
+  
+  try {
+    const toDo = await db.any(queries.getOneTodo, [user.id]);
+    return res.status(200).json({
+      status: "Success",
+      message: "Accessment Retrieved",
+      data: toDo,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+      status: "fail",
+    });
+  }
+};
 
-// const deleteBatch = async (req, res) => {
-//   let { id } = req.params;
-//   try {
-//      db.none(queries.deleteBatch, [id]);
-//         return res.status(200).json({
-//             status: 'Success',
-//             message: 'Batch Removed',
-//         })
-//   } catch (error) {
-//     res.status(500).json({
-//         message: 'An error has ocurred',
-//         error
-//     })
-//   }
-// }
+const deleteTodo = async (req, res) => {
+  let user = req.decoded;
+  console.log(user)
+  try {
+    db.none(queries.deleteTodo, [user.id]);
+    return res.status(200).json({
+      status: "Success",
+      message: "Batch Removed",
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+      status: "fail",
+    });
+  }
+};
 
-// module.exports = {
-//   createBatch,
-//   getBatch,
-//   updateBatch,
-//   deleteBatch,
-//   getOneBatch 
-// }
+module.exports = {
+  createTodo,
+  getTodo,
+  updateTodo,
+  deleteTodo,
+  getOneTodo,
+};

@@ -5,5 +5,4 @@ CREATE TABLE Users (
     email VARCHAR NOT NULL UNIQUE,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-    
 );
