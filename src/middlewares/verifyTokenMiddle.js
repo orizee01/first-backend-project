@@ -5,14 +5,14 @@ const jwt = require("jsonwebtoken");
     try {
       const token = req.header("Authorization");
       if (!token) {
-        res.status(403).json({
+        return res.status(403).json({
           message: "not Authenticated",
         });
       }
 
       const verify = verifyToken(token);
       if (verify.message) {
-        res.status(403).json({
+     return res.status(403).json({
           message: verify.message,
           status: "fail",
         });

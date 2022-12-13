@@ -1,14 +1,16 @@
 module.exports = {
 
-    toDo: `INSERT INTO todo (title,users_id)
+    toDo: `INSERT INTO todo (title, users_id)
     VALUES($1, $2)
     RETURNING *;
     `,
     getTodo: `SELECT * FROM todo;`,
     updateTodo: `UPDATE todo SET title = $1
-     WHERE users_id = $2 
+     WHERE id = $2 
      RETURNING *;
     `,
-    getOneTodo:`SELECT * FROM todo WHERE users_id = $1`,
-    deleteTodo:`DELETE * FROM todo WHERE users_id = $1;`
+    getOneTodo:`SELECT * FROM todo WHERE id = $1`,
+    deleteTodo:`DELETE FROM todo WHERE id = $1
+    ;`
 } 
+             

@@ -64,6 +64,7 @@ const updateUsers = async (req, res) => {
 };
 
 const deleteUsers = async (req, res) => {
+  
   let { id } = req.params;
   try {
     await db.none(queries.deleteUser, [id]);

@@ -5,7 +5,6 @@ const createTodo = async (req, res) => {
   try {
     let { title } = req.body;
     const user = req.decoded;
-    console.log(user.id)
     const toDo = await db.any(queries.toDo, [title, user.id]);
     return res.status(200).json({
       status: "success",
@@ -37,10 +36,10 @@ const getTodo = async (req, res) => {
 };
 
 const updateTodo = async (req, res) => {
-  
-  let { title } = req.body;
+   let { title } = req.body
+  let { id } = req.params;
   try {
-    const toDo = await db.any(queries.updateTodo, [title, user.id]);
+    const toDo = await db.any(queries.updateTodo, [title, id]);
     return res.status(200).json({
       status: "success",
       message: "Todo updated",
@@ -57,11 +56,12 @@ const updateTodo = async (req, res) => {
 const getOneTodo = async (req, res) => {
   
   try {
-    const toDo = await db.any(queries.getOneTodo, [user.id]);
+    const todo = req.todo
+    console.log(todo)
     return res.status(200).json({
       status: "Success",
-      message: "Accessment Retrieved",
-      data: toDo,
+      message: "todo Retrieved",
+      data: todo,
     });
   } catch (error) {
     res.status(500).json({
@@ -72,13 +72,14 @@ const getOneTodo = async (req, res) => {
 };
 
 const deleteTodo = async (req, res) => {
-  let user = req.decoded;
-  console.log(user)
+
+  let todo = req.todo;
+  console.log(todo)
   try {
-    db.none(queries.deleteTodo, [user.id]);
+    db.none(queries.deleteTodo, [todo.id]);
     return res.status(200).json({
       status: "Success",
-      message: "Batch Removed",
+      message: "Todo Removed",
     });
   } catch (error) {
     res.status(500).json({

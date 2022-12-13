@@ -6,7 +6,7 @@ module.exports = {
     try {
       const { email } = req.body;
       const user = await getByEmail(email)
-      console.log(user)  
+       
       if (user.length < 1 ) {  
         return res.status(400).json({
           status: "fail",
