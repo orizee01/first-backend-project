@@ -12,7 +12,7 @@ app.use(usersRouter);
 app.use(todoRouter);
 
 
-app.listen(port, function(){
+ module.exports = app.listen(port, function(){
     console.log(`application running on port ${port}`)
 });
  

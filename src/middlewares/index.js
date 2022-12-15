@@ -1,4 +1,6 @@
-const {findUserByEmail, getByEmail } = require("../services");
+
+
+const {findUserByEmail} = require("../services");
 
 module.exports = {
     checkIfUserExists: async (req, res, next) => {

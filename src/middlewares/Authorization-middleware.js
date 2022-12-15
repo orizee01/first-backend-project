@@ -2,7 +2,7 @@
 
 const { getByEmail } = require("../services/index");
 module.exports = {
-  CheckIfUserExist: async (req, res, next) => {
+  CheckIfUserWithEmailExist: async (req, res, next) => {
     try {
       const { email } = req.body;
       const user = await getByEmail(email)

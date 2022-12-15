@@ -3,8 +3,8 @@ const todos = require('../controller/todo');
 const router = express.Router();
 const { todoValidator } = require('../../validations/todoValidation')
 const { verifyAuth } = require('../middlewares/verifyTokenMiddle')
-const { CheckIfTodoExist } = require('.././middlewares/todoMiddleWare')
-const { CheckIfTodoBelongsToUser } = require('../middlewares/todoMiddleWare')
+const { CheckIfTodoExist , CheckIfTodoBelongsToUser} = require('../middlewares/todoMiddleWare')
+
 
  router.post(
     '/todo',
