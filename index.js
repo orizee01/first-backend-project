@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config()
 const usersRouter = require('./src/routes/user_route')
 const port = process.env.PORT || 5000;
-const todoRouter = require('./src/routes/todo_route')
+// const todoRouter = require('./src/routes/todo_route')
 
 const app = express();
 app.use(express.json());
