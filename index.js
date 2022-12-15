@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false , limit: '50mb'}));
 app.use(usersRouter);
-app.use(todoRouter);
+// app.use(todoRouter);
 
 
  module.exports = app.listen(port, function(){
