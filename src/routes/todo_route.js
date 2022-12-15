@@ -1,9 +1,9 @@
 const express = require('express');
 const todos = require('../controller/todo');
 const router = express.Router();
-const { todoValidator } = require('../../validations/todoValidation')
-const { verifyAuth } = require('../middlewares/verifyTokenMiddle')
-const { CheckIfTodoExist, CheckIfTodoBelongsToUser} = require('../middlewares/todoMiddleWare')
+const { todoValidator } = require('../../validations/todoValidation');
+const { verifyAuth } = require('../middlewares/verifyTokenMiddle');
+// const { CheckIfTodoExist, CheckIfTodoBelongsToUser} = require('../middlewares/todoMiddleWare');
 
 
  router.post(
@@ -19,16 +19,16 @@ const { CheckIfTodoExist, CheckIfTodoBelongsToUser} = require('../middlewares/to
  router.patch(
     '/todo/:id', 
   verifyAuth, 
-  CheckIfTodoExist,
-  CheckIfTodoBelongsToUser,
+//   CheckIfTodoExist,
+//   CheckIfTodoBelongsToUser,
   todos.updateTodo
  );
 
  router.get(
     '/todo/:id', 
   verifyAuth,
-  CheckIfTodoExist,
-  CheckIfTodoBelongsToUser,
+//   CheckIfTodoExist,
+//   CheckIfTodoBelongsToUser,
   todos.getOneTodo
 
  ); 
@@ -36,8 +36,8 @@ const { CheckIfTodoExist, CheckIfTodoBelongsToUser} = require('../middlewares/to
  router.delete(
     '/todo/:id', 
    verifyAuth,
-   CheckIfTodoExist,
-   CheckIfTodoBelongsToUser,
+   // CheckIfTodoExist,
+   // CheckIfTodoBelongsToUser,
    todos.deleteTodo
  ); 
        
