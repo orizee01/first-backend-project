@@ -1,7 +1,7 @@
 const { getAlltodo } = require("../services/todoservice");
 
-module.exports = {
-  CheckIfTodoExist: async (req, res, next) => {
+
+  const CheckIfTodoExist = async (req, res, next) => {
     try {
       const { id } = req.params;
       const todo = await getAlltodo(id);
@@ -22,9 +22,9 @@ module.exports = {
         message: err.message,
       });
     }
-  },
+  }
 
-  CheckIfTodoBelongsToUser: async (req, res, next) => {
+   const CheckIfTodoBelongsToUser = async (req, res, next) => {
     try {
       const userId = req.todo.users_id;
       console.log(userId, "end todo");
@@ -45,5 +45,7 @@ module.exports = {
         message: err.message,
       });
     }
-  },
-};
+  }
+module.exports = {
+  CheckIfTodoBelongsToUser, CheckIfTodoExist
+}
