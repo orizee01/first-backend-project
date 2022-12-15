@@ -20,16 +20,16 @@ const { CheckIfTodoExist, CheckIfTodoBelongsToUser} = require('../middlewares/to
  router.patch(
     '/todo/:id', 
   verifyAuth, 
-//   CheckIfTodoExist,
-//   CheckIfTodoBelongsToUser,
+ CheckIfTodoExist,
+  CheckIfTodoBelongsToUser,
   todos.updateTodo
  );
 
  router.get(
     '/todo/:id', 
   verifyAuth,
-//   CheckIfTodoExist,
-//   CheckIfTodoBelongsToUser,
+  CheckIfTodoExist,
+  CheckIfTodoBelongsToUser,
   todos.getOneTodo
 
  ); 
@@ -37,8 +37,8 @@ const { CheckIfTodoExist, CheckIfTodoBelongsToUser} = require('../middlewares/to
  router.delete(
     '/todo/:id', 
    verifyAuth,
-   // CheckIfTodoExist,
-   // CheckIfTodoBelongsToUser,
+   CheckIfTodoExist,
+    CheckIfTodoBelongsToUser,
    todos.deleteTodo
  ); 
        
