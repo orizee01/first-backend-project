@@ -14,6 +14,7 @@ const { CheckIfTodoExist, CheckIfTodoBelongsToUser} = require('../middlewares/to
 );
 
  router.get('/todo',
+   verifyAuth,
   todos.getTodo
   ); 
 
