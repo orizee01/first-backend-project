@@ -30,8 +30,7 @@ router.post(
 
 router.post(
     "/users/login",
-    verifyAuth, 
-    loginValidator, 
+     loginValidator, 
      CheckIfUserWithEmailExist, 
      users.login
      );
