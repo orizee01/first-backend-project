@@ -6,6 +6,7 @@ const todoRouter = require('./src/routes/todo_route');
 const port = process.env.PORT || 5000;
 const cors = require('cors');
 const app = express();
+const morgan = require('morgan')
 const corsOptions = {
     origin:'*', 
     credentials:true,            //access-control-allow-credentials:true
@@ -14,6 +15,7 @@ const corsOptions = {
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false , limit: '50mb'}));
+app.use(morgan('combined'))
 app.use(usersRouter);
 app.use(todoRouter);
 
