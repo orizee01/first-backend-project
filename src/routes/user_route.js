@@ -22,7 +22,6 @@ router.get(
 
 router.post(
     "/users",
-     verifyAuth,
       signupValidator,
        checkIfUserExists,
         users.registerUsers
@@ -31,7 +30,8 @@ router.post(
 
 router.post(
     "/users/login",
-    verifyAuth, loginValidator, 
+    verifyAuth, 
+    loginValidator, 
      CheckIfUserWithEmailExist, 
      users.login
      );
