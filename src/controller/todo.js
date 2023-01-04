@@ -20,8 +20,9 @@ const createTodo = async (req, res) => {
 };
 
 const getTodo = async (req, res) => {
+  console.log('UserID', req.decoded);
   try {
-    const toDo = await db.any(queries.getTodo);
+    const toDo = await db.any(queries.getTodo, [req.decoded.id]);
     return res.status(200).json({
       status: "success",
       message: "Todo gotten",

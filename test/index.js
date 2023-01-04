@@ -6,10 +6,26 @@
 // chai.should()
 // chai.use(chaiHttp)
 
-// describe('Todo API',() => {
-//     // Test the Get route
+// describe('User API', () => {
+//     //Assertion style
+//      describe('POST/users', () => {
+//         it('should register all users', (done) => {
+//               chai.request(server)
+//              .get ('/users')
+//               .end((err, res) => {
+//                 res.should.have.status(200);
+//                 res.body.should.be.a('array');
+//                 res.body.length.should.be.above(0)
+//                 done()
+//               })
+//         })
+//      })   
+// })
 
-//     describe('GET/todo',() => {
+//describe('Todo API',() => {
+    // Test the Get route
+
+//     describe('GET/todo', () => {
 
 //         it('it should GET all the todo table',(done) => {
 //          chai.request(server)
@@ -18,10 +34,11 @@
 //                  console.log(response.body)
 //                 response.should.have.status(200);
 //                 response.body.should.be.a('array')
+//                 response.body.length.should.be.above(0);
 //                 done();
 //              })
 //         })
-//     })
+  //  })
 
         // it('it should NOT GET all the todo tables',(done) => {
         //  chai.request(server)
@@ -48,4 +65,4 @@
 //             done();
 //          })
 //     })
-// })
+//})

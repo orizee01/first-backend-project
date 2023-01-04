@@ -4,7 +4,7 @@ module.exports = {
     VALUES($1, $2)
     RETURNING *;
     `,
-    getTodo: `SELECT * FROM todo;`,
+    getTodo: `SELECT * FROM todo where users_id = $1;`,
     updateTodo: `UPDATE todo SET title = $1
      WHERE id = $2 
      RETURNING *;
