@@ -1,7 +1,9 @@
 {
     "dev": {
       "ENV": "DB_URL"
-      
+    },
+    "test": {
+      "ENV": "TEST_DB_URL"
     },
     "sql-file": true
   }

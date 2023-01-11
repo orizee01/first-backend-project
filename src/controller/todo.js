@@ -8,7 +8,7 @@ const createTodo = async (req, res) => {
     const toDo = await db.any(queries.toDo, [title, user.id]);
     return res.status(200).json({
       status: "success",
-      message: "todo Created",
+      message: "Todo has been created",
       data: toDo,
     });
   } catch (error) {
@@ -20,9 +20,9 @@ const createTodo = async (req, res) => {
 };
 
 const getTodo = async (req, res) => {
-  console.log('UserID', req.decoded);
   try {
     const toDo = await db.any(queries.getTodo, [req.decoded.id]);
+    console.log( "hello", toDo)
     return res.status(200).json({
       status: "success",
       message: "Todo gotten",
@@ -58,7 +58,7 @@ const getOneTodo = async (req, res) => {
   
   try {
     const todo = req.todo
-    console.log(todo)
+    console.log("$##$$#%^$&&*",todo)
     return res.status(200).json({
       status: "Success",
       message: "todo Retrieved",

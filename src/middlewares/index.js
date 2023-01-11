@@ -8,7 +8,7 @@ module.exports = {
             let { email } = req.body;
             const existingEmail = await findUserByEmail(email);
             if (existingEmail.length > 0) {
-              return res.status(400).json({
+           return res.status(400).json({
                 status: "Failed",
                 message: "Email already exists",
               });

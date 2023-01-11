@@ -8,9 +8,11 @@
   },
   "scripts": {
     "prestart": "npm run migrate up",
+    "pretest": "db-migrate down -c 10000000000 --config database.json -e test && db-migrate up --config database.json -e test",
+    "test": " nyc mocha --exit",
+    "posttest": "db-migrate down -c 10000000000 --config database.json -e test",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "mocha",
     "migrate": "db-migrate"
   },
   "author": "Oreoluwa",
@@ -27,7 +29,8 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "nyc": "^15.1.0",
-    "pg-promise": "^10.15.0"
+    "pg-promise": "^10.15.0",
+    "supertest": "^6.3.3"
   },
   "devDependencies": {
     "chai": "^4.3.7",
