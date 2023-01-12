@@ -9,7 +9,7 @@
   "scripts": {
     "prestart": "npm run migrate up",
     "pretest": "db-migrate down -c 10000000000 --config database.json -e test && db-migrate up --config database.json -e test",
-    "test": " nyc mocha --exit",
+    "test": "cross-env NODE_ENV=test nyc mocha --exit",
     "posttest": "db-migrate down -c 10000000000 --config database.json -e test",
     "start": "node index.js",
     "dev": "nodemon index.js",
@@ -34,7 +34,9 @@
   },
   "devDependencies": {
     "chai": "^4.3.7",
+    "cross-env": "^7.0.3",
     "mocha": "^10.2.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sinon": "^15.0.1"
   }
 }

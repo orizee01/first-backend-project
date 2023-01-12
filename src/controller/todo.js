@@ -22,7 +22,6 @@ const createTodo = async (req, res) => {
 const getTodo = async (req, res) => {
   try {
     const toDo = await db.any(queries.getTodo, [req.decoded.id]);
-    console.log( "hello", toDo)
     return res.status(200).json({
       status: "success",
       message: "Todo gotten",
@@ -58,7 +57,7 @@ const getOneTodo = async (req, res) => {
   
   try {
     const todo = req.todo
-    console.log("$##$$#%^$&&*",todo)
+    console.log(todo)
     return res.status(200).json({
       status: "Success",
       message: "todo Retrieved",

@@ -5,7 +5,6 @@ const { getAlltodo } = require("../services/todoservice");
     try {
       const { id } = req.params;
       const todo = await getAlltodo(id);
-      console.log(todo);
       if (todo === null) {
         return res.status(403).json({
           status: "fail",
@@ -13,6 +12,7 @@ const { getAlltodo } = require("../services/todoservice");
         });
       }
       req.todo = todo;
+
       next();
     } catch (err) {
       console.log(err.message, "chex");
@@ -27,9 +27,7 @@ const { getAlltodo } = require("../services/todoservice");
    const CheckIfTodoBelongsToUser = async (req, res, next) => {
     try {
       const userId = req.todo.users_id;
-      console.log(userId, "end todo");
       const id = req.decoded.id;
-
       if (userId !== id) {
         return res.status(403).json({
           status: "fail",
@@ -47,5 +45,6 @@ const { getAlltodo } = require("../services/todoservice");
     }
   }
 module.exports = {
-  CheckIfTodoBelongsToUser, CheckIfTodoExist
+  CheckIfTodoBelongsToUser, 
+  CheckIfTodoExist
 }
