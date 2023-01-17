@@ -6,6 +6,7 @@ const todoRouter = require('./src/routes/todo_route');
 const port = process.env.PORT || 5000;
 const cors = require('cors');
 const app = express();
+const logger = require('./logger')
 const morgan = require('morgan')
 const corsOptions = {
     origin:'*', 
@@ -13,14 +14,15 @@ const corsOptions = {
     optionSuccessStatus:200
 }
 app.use(cors());
+global.logger = logger;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false , limit: '50mb'}));
 app.use(morgan('combined'))
 app.use(usersRouter);
 app.use(todoRouter);
-
+ 
 
  module.exports = app.listen(port, function(){
-    console.log(`application running on port ${port}`)
+    logger.info(`application running on port ${port}`)
 });
  

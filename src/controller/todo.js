@@ -36,10 +36,16 @@ const getTodo = async (req, res) => {
 };
 
 const updateTodo = async (req, res) => {
-   let { title } = req.body
+   let { title, status } = req.body
   let { id } = req.params;
   try {
-    const toDo = await db.any(queries.updateTodo, [title, id]);
+    const existingTodo = await db.oneOrNone(queries.getOneTodo, [id])
+    const payload = [
+      title || existingTodo.title,
+      status || existingTodo.status,
+      id
+    ]
+    const toDo = await db.any(queries.updateTodo, payload);
     return res.status(200).json({
       status: "success",
       message: "Todo updated",

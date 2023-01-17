@@ -9,3 +9,5 @@ const pgp = pg({ promiseLib: promise, noLocking: true });
 const db = pgp(dbURL);
 
 module.exports = db
+
+

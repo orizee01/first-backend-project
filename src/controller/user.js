@@ -1,4 +1,5 @@
 
+const logger = require("../../logger");
 const db = require("../config/config");
 const queries = require("../queries/user_query");
 const { generateToken } = require("../services/generateToken");
@@ -103,6 +104,7 @@ const login = async (req, res) => {
  try{
       const [student] = req.user
       const token = await generateToken(student)
+    logger.info(`\::info logged user in successful ${student.firstname} ${student.lastname} login.userController.js ` )
     return res.status(200).json({
       status: "Success",
       message: "login successful",
@@ -112,10 +114,12 @@ const login = async (req, res) => {
       },
     });
   } catch (error) {
-    res.status(500).json({
-      status: "Failed",
-      message: error.message,
-    });
+    logger.error(error.message)
+    return error
+  //   res.status(500).json({
+  //     status: "Failed",
+  //     message: error.message,
+  //   });
   }
 };
 

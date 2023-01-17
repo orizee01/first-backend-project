@@ -1,3 +1,4 @@
+const logger = require("../../logger");
 const { getAlltodo } = require("../services/todoservice");
 
 
@@ -12,10 +13,9 @@ const { getAlltodo } = require("../services/todoservice");
         });
       }
       req.todo = todo;
-
+       logger.info(req.todo)
       next();
     } catch (err) {
-      console.log(err.message, "chex");
       res.status(400).json({
         status: "fail",
         data: null,
@@ -44,7 +44,7 @@ const { getAlltodo } = require("../services/todoservice");
       });
     }
   }
-module.exports = {
-  CheckIfTodoBelongsToUser, 
-  CheckIfTodoExist
+    module.exports = {
+    CheckIfTodoBelongsToUser, 
+     CheckIfTodoExist
 }

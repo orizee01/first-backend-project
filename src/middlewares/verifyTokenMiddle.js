@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const logger = require("../../logger");
 
 
  const verifyAuth = (req, res, next) => {
@@ -12,13 +13,14 @@ const jwt = require("jsonwebtoken");
       }
 
       const verify = verifyToken(token);
+      console.log(verify)
       if (verify.message) {
      return res.status(403).json({
           message: verify.message,
           status: "fail",
         });
       }
-      console.log(verify);
+      logger.info(verify);
       req.decoded = verify;
       next();
     } catch (err) {

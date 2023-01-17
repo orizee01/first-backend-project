@@ -1,5 +1,6 @@
 
 
+// const logger = require("../../logger");
 const { getByEmail } = require("../services/index");
 module.exports = {
   CheckIfUserWithEmailExist: async (req, res, next) => {
@@ -7,11 +8,13 @@ module.exports = {
       const { email } = req.body;
       const user = await getByEmail(email)
       if (user.length < 1 ) {  
+        logger.info('Invalid credentials', user)
         return res.status(400).json({
           status: "fail",
           message: "invalid credentials",
         });
       }
+      
       req.user = user;
       next();
     } catch (err) {

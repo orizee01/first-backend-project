@@ -1,0 +1,219 @@
+{"level":"info","message":"application running on port 4000","service":"user-service","timestamp":"2023-01-13T10:02:11.023Z"}
+{"level":"info","message":"application running on port 4000","service":"user-service","timestamp":"2023-01-13T10:02:20.267Z"}
+{"level":"info","message":"application running on port 4000","service":"user-service","timestamp":"2023-01-13T10:04:09.601Z"}
+{"level":"info","message":"application running on port 4000","service":"user-service","timestamp":"2023-01-13T10:04:16.336Z"}
+{"level":"info","message":"application running on port 4000","service":"user-service","timestamp":"2023-01-13T10:04:17.732Z"}
+{"level":"info","message":"application running on port 4000","service":"user-service","timestamp":"2023-01-13T10:04:18.371Z"}
+{"level":"info","message":"application running on port 4000","service":"user-service","timestamp":"2023-01-13T10:04:21.791Z"}
+2023-01-13 11:04:37 - INFO  - application running on port 4000
+2023-01-13 11:05:25 - INFO  - application running on port 4000
+2023-01-13 11:05:28 - INFO  - application running on port 4000
+2023-01-13 11:05:40 - INFO  - application running on port 4000
+2023-01-13 11:05:42 - INFO  - application running on port 4000
+2023-01-13 11:05:52 - INFO  - application running on port 4000
+2023-01-13 11:06:02 - INFO  - application running on port 4000
+2023-01-13 11:06:18 - INFO  - application running on port 4000
+2023-01-13 11:07:26 - INFO  - application running on port 4000
+2023-01-13 11:07:39 - INFO  - application running on port 4000
+2023-01-13 11:08:11 - INFO  - application running on port 4000
+2023-01-13 11:08:15 - INFO  - application running on port 4000
+2023-01-13 11:08:43 - INFO  - application running on port 4000
+2023-01-13 11:14:05 - INFO  - undefined
+2023-01-13 11:14:05 - INFO  - login successful
+2023-01-13 11:18:30 - INFO  - application running on port 4000
+2023-01-13 11:18:36 - INFO  - application running on port 4000
+2023-01-13 11:18:46 - INFO  - application running on port 4000
+2023-01-13 11:18:56 - INFO  - application running on port 4000
+2023-01-13 11:18:59 - INFO  - application running on port 4000
+2023-01-13 11:19:21 - INFO  - application running on port 4000
+2023-01-13 11:19:25 - INFO  - application running on port 4000
+2023-01-13 11:19:29 - INFO  - application running on port 4000
+2023-01-13 11:19:31 - INFO  - application running on port 4000
+2023-01-13 11:19:33 - INFO  - application running on port 4000
+2023-01-13 11:19:37 - INFO  - application running on port 4000
+2023-01-13 11:19:39 - INFO  - application running on port 4000
+2023-01-13 11:19:44 - INFO  - application running on port 4000
+2023-01-13 11:19:46 - INFO  - application running on port 4000
+2023-01-13 11:19:49 - INFO  - application running on port 4000
+2023-01-13 11:20:00 - INFO  - application running on port 4000
+2023-01-13 11:20:03 - INFO  - application running on port 4000
+2023-01-13 11:20:06 - INFO  - application running on port 4000
+2023-01-13 11:20:12 - INFO  - application running on port 4000
+2023-01-13 11:20:20 - INFO  - application running on port 4000
+2023-01-13 11:20:31 - INFO  - undefined
+2023-01-13 11:20:31 - INFO  - ::info logged user in successful funmi daniel login.userController.js 
+2023-01-13 11:23:44 - INFO  - application running on port 4000
+2023-01-13 11:23:56 - INFO  - application running on port 4000
+2023-01-13 11:23:58 - INFO  - application running on port 4000
+2023-01-13 11:24:01 - INFO  - application running on port 4000
+2023-01-13 11:24:03 - INFO  - application running on port 4000
+2023-01-13 11:24:04 - INFO  - application running on port 4000
+2023-01-13 11:24:06 - INFO  - application running on port 4000
+2023-01-13 11:24:10 - INFO  - application running on port 4000
+2023-01-13 11:24:14 - INFO  - application running on port 4000
+2023-01-13 11:24:40 - INFO  - application running on port 4000
+2023-01-13 11:24:40 - INFO  - ::info logged user in successful reenmi yemi login.userController.js 
+2023-01-13 11:24:40 - INFO  - [object Object]
+2023-01-13 11:24:40 - INFO  - [object Object]
+2023-01-13 11:24:40 - INFO  - [object Object]
+2023-01-13 11:24:40 - INFO  - [object Object]
+2023-01-13 11:24:40 - INFO  - [object Object]
+2023-01-13 11:24:40 - INFO  - [object Object]
+2023-01-13 11:24:40 - INFO  - [object Object]
+2023-01-13 11:24:40 - INFO  - [object Object]
+2023-01-13 11:25:15 - INFO  - application running on port 4000
+2023-01-13 11:25:34 - INFO  - application running on port 4000
+2023-01-13 11:27:28 - INFO  - application running on port 4000
+2023-01-13 11:27:40 - INFO  - ::info logged user in successful funmi daniel login.userController.js 
+2023-01-13 11:30:55 - INFO  - application running on port 4000
+2023-01-13 11:37:04 - INFO  - ::info logged user in successful funmi daniel login.userController.js 
+2023-01-13 11:38:32 - INFO  - application running on port 4000
+2023-01-13 11:38:35 - INFO  - application running on port 4000
+2023-01-13 11:38:37 - INFO  - application running on port 4000
+2023-01-13 11:38:41 - INFO  - application running on port 4000
+2023-01-16 16:56:00 - INFO  - application running on port 4000
+2023-01-16 16:56:06 - INFO  - application running on port 4000
+2023-01-16 16:57:05 - INFO  - application running on port 4000
+2023-01-16 16:57:06 - INFO  - application running on port 4000
+2023-01-17 09:12:57 - INFO  - application running on port 4000
+2023-01-17 09:17:58 - INFO  - Invalid credentials
+2023-01-17 09:18:54 - INFO  - Invalid credentials
+2023-01-17 09:19:03 - INFO  - ::info logged user in successful tun lana login.userController.js 
+2023-01-17 09:19:30 - INFO  - [object Object]
+2023-01-17 09:20:45 - INFO  - application running on port 4000
+2023-01-17 09:20:50 - INFO  - application running on port 4000
+2023-01-17 09:20:52 - INFO  - [object Object]
+2023-01-17 09:23:28 - INFO  - application running on port 4000
+2023-01-17 09:23:37 - INFO  - application running on port 4000
+2023-01-17 09:27:54 - INFO  - application running on port 4000
+2023-01-17 09:27:56 - INFO  - application running on port 4000
+2023-01-17 09:28:00 - INFO  - application running on port 4000
+2023-01-17 09:28:20 - INFO  - application running on port 4000
+2023-01-17 09:28:38 - INFO  - application running on port 4000
+2023-01-17 09:29:43 - INFO  - ::info logged user in successful tun lana login.userController.js 
+2023-01-17 09:30:20 - INFO  - ::info logged user in successful tun lana login.userController.js 
+2023-01-17 09:30:58 - INFO  - application running on port 4000
+2023-01-17 09:31:11 - INFO  - application running on port 4000
+2023-01-17 09:31:29 - INFO  - application running on port 4000
+2023-01-17 09:32:27 - INFO  - application running on port 4000
+2023-01-17 09:32:48 - INFO  - application running on port 4000
+2023-01-17 09:32:54 - INFO  - application running on port 4000
+2023-01-17 09:33:13 - INFO  - application running on port 4000
+2023-01-17 09:33:25 - INFO  - application running on port 4000
+2023-01-17 09:33:40 - INFO  - application running on port 4000
+2023-01-17 09:33:43 - INFO  - application running on port 4000
+2023-01-17 09:34:50 - INFO  - [object Object]
+2023-01-17 09:35:41 - INFO  - [object Object]
+2023-01-17 09:36:00 - INFO  - [object Object]
+2023-01-17 09:36:15 - INFO  - [object Object]
+2023-01-17 09:36:15 - INFO  - [object Object]
+2023-01-17 09:36:47 - INFO  - [object Object]
+2023-01-17 09:36:47 - INFO  - [object Object]
+2023-01-17 09:37:17 - INFO  - application running on port 4000
+2023-01-17 09:37:22 - INFO  - [object Object]
+2023-01-17 09:37:22 - INFO  - [object Object]
+2023-01-17 09:38:38 - INFO  - application running on port 4000
+2023-01-17 09:38:46 - INFO  - [object Object]
+2023-01-17 09:38:46 - INFO  - [object Object]
+2023-01-17 09:39:07 - INFO  - application running on port 4000
+2023-01-17 09:39:08 - INFO  - application running on port 4000
+2023-01-17 09:39:10 - INFO  - [object Object]
+2023-01-17 09:39:10 - INFO  - [object Object]
+2023-01-17 09:39:32 - INFO  - application running on port 4000
+2023-01-17 09:39:34 - INFO  - application running on port 4000
+2023-01-17 09:41:03 - INFO  - application running on port 4000
+2023-01-17 09:41:08 - INFO  - application running on port 4000
+2023-01-17 09:41:11 - INFO  - application running on port 4000
+2023-01-17 09:41:18 - INFO  - application running on port 4000
+2023-01-17 09:41:21 - INFO  - application running on port 4000
+2023-01-17 09:41:48 - INFO  - application running on port 4000
+2023-01-17 09:41:57 - INFO  - application running on port 4000
+2023-01-17 09:42:00 - INFO  - application running on port 4000
+2023-01-17 09:42:02 - INFO  - application running on port 4000
+2023-01-17 09:42:05 - INFO  - application running on port 4000
+2023-01-17 09:42:25 - INFO  - [object Object]
+2023-01-17 09:42:25 - INFO  - [object Object]
+2023-01-17 09:45:12 - INFO  - application running on port 4000
+2023-01-17 09:45:15 - INFO  - application running on port 4000
+2023-01-17 09:45:17 - INFO  - application running on port 4000
+2023-01-17 09:45:20 - INFO  - application running on port 4000
+2023-01-17 09:45:22 - INFO  - application running on port 4000
+2023-01-17 09:49:42 - INFO  - application running on port 4000
+2023-01-17 09:49:46 - INFO  - application running on port 4000
+2023-01-17 09:49:54 - INFO  - [object Object]
+2023-01-17 09:49:54 - INFO  - [object Object]
+2023-01-17 09:50:10 - INFO  - application running on port 4000
+2023-01-17 09:50:11 - INFO  - [object Object]
+2023-01-17 09:50:11 - INFO  - [object Object]
+2023-01-17 09:51:56 - INFO  - application running on port 4000
+2023-01-17 09:51:59 - INFO  - [object Object]
+2023-01-17 09:51:59 - INFO  - [object Object]
+2023-01-17 09:52:37 - INFO  - application running on port 4000
+2023-01-17 09:52:40 - INFO  - [object Object]
+2023-01-17 09:52:40 - INFO  - [object Object]
+2023-01-17 09:52:58 - INFO  - application running on port 4000
+2023-01-17 09:53:06 - INFO  - application running on port 4000
+2023-01-17 09:53:12 - INFO  - application running on port 4000
+2023-01-17 09:53:15 - INFO  - application running on port 4000
+2023-01-17 09:53:20 - INFO  - application running on port 4000
+2023-01-17 09:53:23 - INFO  - application running on port 4000
+2023-01-17 09:53:49 - INFO  - application running on port 4000
+2023-01-17 09:53:51 - INFO  - application running on port 4000
+2023-01-17 09:53:58 - INFO  - application running on port 4000
+2023-01-17 09:54:00 - INFO  - application running on port 4000
+2023-01-17 09:54:04 - INFO  - application running on port 4000
+2023-01-17 09:54:19 - INFO  - application running on port 4000
+2023-01-17 09:54:21 - INFO  - application running on port 4000
+2023-01-17 09:54:22 - INFO  - application running on port 4000
+2023-01-17 09:54:25 - INFO  - application running on port 4000
+2023-01-17 09:54:29 - INFO  - application running on port 4000
+2023-01-17 09:54:32 - INFO  - application running on port 4000
+2023-01-17 09:54:34 - INFO  - application running on port 4000
+2023-01-17 09:54:49 - INFO  - application running on port 4000
+2023-01-17 09:54:56 - INFO  - application running on port 4000
+2023-01-17 09:55:04 - INFO  - application running on port 4000
+2023-01-17 09:55:08 - INFO  - application running on port 4000
+2023-01-17 09:55:11 - INFO  - application running on port 4000
+2023-01-17 09:55:14 - INFO  - application running on port 4000
+2023-01-17 09:55:17 - INFO  - application running on port 4000
+2023-01-17 09:55:26 - INFO  - application running on port 4000
+2023-01-17 09:55:53 - INFO  - [object Object]
+2023-01-17 09:55:53 - INFO  - [object Object]
+2023-01-17 09:56:51 - INFO  - application running on port 4000
+2023-01-17 09:56:58 - INFO  - application running on port 4000
+2023-01-17 09:57:03 - INFO  - [object Object]
+2023-01-17 09:57:03 - INFO  - [object Object]
+2023-01-17 09:57:15 - INFO  - application running on port 4000
+2023-01-17 09:58:11 - INFO  - application running on port 4000
+2023-01-17 09:58:12 - INFO  - application running on port 4000
+2023-01-17 09:58:26 - INFO  - application running on port 4000
+2023-01-17 09:58:28 - INFO  - [object Object]
+2023-01-17 09:58:28 - INFO  - [object Object]
+2023-01-17 09:59:19 - INFO  - application running on port 4000
+2023-01-17 09:59:23 - INFO  - application running on port 4000
+2023-01-17 09:59:26 - INFO  - [object Object]
+2023-01-17 09:59:26 - INFO  - [object Object]
+2023-01-17 09:59:42 - INFO  - [object Object]
+2023-01-17 09:59:42 - INFO  - [object Object]
+2023-01-17 10:00:11 - INFO  - application running on port 4000
+2023-01-17 10:00:13 - INFO  - application running on port 4000
+2023-01-17 10:00:26 - INFO  - [object Object]
+2023-01-17 10:00:26 - INFO  - [object Object]
+2023-01-17 10:01:17 - INFO  - application running on port 4000
+2023-01-17 10:01:28 - INFO  - [object Object]
+2023-01-17 10:01:28 - INFO  - [object Object]
+2023-01-17 10:01:39 - INFO  - application running on port 4000
+2023-01-17 10:01:49 - INFO  - [object Object]
+2023-01-17 10:01:49 - INFO  - [object Object]
+2023-01-17 10:02:05 - INFO  - application running on port 4000
+2023-01-17 10:02:19 - INFO  - [object Object]
+2023-01-17 10:02:20 - INFO  - [object Object]
+2023-01-17 10:02:26 - INFO  - [object Object]
+2023-01-17 10:02:26 - INFO  - [object Object]
+2023-01-17 10:02:33 - INFO  - [object Object]
+2023-01-17 10:02:33 - INFO  - [object Object]
+2023-01-17 10:19:39 - INFO  - [object Object]
+2023-01-17 10:19:39 - INFO  - [object Object]
+2023-01-17 10:22:22 - INFO  - application running on port 4000
+2023-01-17 10:22:27 - INFO  - [object Object]
+2023-01-17 10:22:27 - INFO  - [object Object]

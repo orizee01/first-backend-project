@@ -1,7 +1,7 @@
 const chai = require('chai');
 const sinon = require('sinon');
 const server = require("../.././index");
-const {CheckIfTodoBelongsToUser } =  require('../.././src/middlewares/todo')
+const { CheckIfTodoBelongsToUser } =  require('../.././src/middlewares/todo')
 const { CheckIfTodoExist } = require('../../src/middlewares/todo');
 const { verifyAuth } = require('./.././..//src/middlewares/verifyTokenMiddle')
 const { checkIfUserExists} = require('./.././.././src/middlewares/index')
@@ -15,10 +15,10 @@ describe('', () => {
 
 
 beforeEach( ()  => {
- status = sinon.stub();
- json = sinon.spy();
-res = {json, status}
-status.returns(res)
+         status = sinon.stub();
+       json = sinon.spy();
+    res = {json, status}
+    status.returns(res)
 })
 
 

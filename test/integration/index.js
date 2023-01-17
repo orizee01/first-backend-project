@@ -104,7 +104,7 @@ describe("PATCH/todo", () => {
 
 
 describe("GET/todo/:id", () => {
-  it("it should get one todo", (done) => {
+   it("it should get one todo", (done) => {
     request(server)
       .get("/todo/1")
       .set("Authorization", process.env.TODO_TOKEN)
