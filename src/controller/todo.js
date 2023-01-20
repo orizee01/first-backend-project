@@ -5,7 +5,8 @@ const createTodo = async (req, res) => {
   try {
     let { title , status} = req.body;
     const user = req.decoded;
-    const toDo = await db.any(queries.toDo, [title, user.id, status]);
+    console.log(title, status, user.id)
+    const toDo = await db.any(queries.toDo, [title,  status, user.id]);
     return res.status(200).json({
       status: "success",
       message: "Todo has been created",
