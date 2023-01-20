@@ -1,7 +1,7 @@
 module.exports = {
 
-    toDo: `INSERT INTO todo (title, users_id)
-    VALUES($1, $2)
+    toDo: `INSERT INTO todo (title, status, users_id)
+    VALUES($1, $2, $3)
     RETURNING *;
     `,
     getTodo: `SELECT * FROM todo where users_id = $1;`,

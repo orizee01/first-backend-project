@@ -3,9 +3,9 @@ const queries = require("../queries/todo_query");
 
 const createTodo = async (req, res) => {
   try {
-    let { title } = req.body;
+    let { title , status} = req.body;
     const user = req.decoded;
-    const toDo = await db.any(queries.toDo, [title, user.id]);
+    const toDo = await db.any(queries.toDo, [title, user.id, status]);
     return res.status(200).json({
       status: "success",
       message: "Todo has been created",

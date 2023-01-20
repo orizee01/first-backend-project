@@ -11,7 +11,7 @@ const todoValidator = (req, res, next) => {
       .max(20)
       .regex(/[a-zA-Z]/)
       .message('the title must have letters')
-      .required(), 
+       .required(), 
   });
   baseValidator(schema, req, res, next);
 };
